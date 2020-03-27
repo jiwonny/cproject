@@ -7,11 +7,11 @@ void drawDice(int _i, int _number);
 int main(void)
 {
 	int choice, wcount = 0, lcount = 0;//win count, lose count
-	int cash = 100000, bcash;//betting ÇÏ´Â ±İ¾×
-	int csum, total;//csumÀÌ¶û total ºñ±³ÇÏ±â À§ÇØ.
+	int cash = 100000, bcash;//betting í•˜ëŠ” ê¸ˆì•¡
+	int csum, total;//csumì´ë‘ total ë¹„êµí•˜ê¸° ìœ„í•´.
 	int i, j, a;
 	int udice[3], cdice[3], usum = 0;
-	int win = 0, lose = 0;//stage º° count
+	int win = 0, lose = 0;//stage ë³„ count
 	do
 	{
 	main:
@@ -74,7 +74,7 @@ int main(void)
 			system("cls");
 			printf("Computer's dice total is %d\n", csum);
 			srand(time(NULL));
-			//csum¿¡ ¸Â°Ô ¼¼°³ÀÇ ¼ıÀÚ ¹è¿­
+			//csumì— ë§ê²Œ ì„¸ê°œì˜ ìˆ«ì ë°°ì—´
 			do {
 				usum = 0;
 				for (i = 0; i <3; i++) {
@@ -82,7 +82,7 @@ int main(void)
 					usum += udice[i];
 				}
 			} while (usum != csum);
-			//ºóÁÖ»çÀ§±×¸®±â
+			//ë¹ˆì£¼ì‚¬ìœ„ê·¸ë¦¬ê¸°
 			for (i = 1; i <= 3; i++)
 			{
 				drawDice(1, 0);
@@ -95,9 +95,9 @@ int main(void)
 			}
 			for (i = 1; i <= 3; i++)drawDice(5, 0);
 			printf("\n");
-			//ºó ÁÖ»çÀ§ ±×¸®±â ³¡
+			//ë¹ˆ ì£¼ì‚¬ìœ„ ê·¸ë¦¬ê¸° ë
 
-			//user dice Ãâ·Â
+			//user dice ì¶œë ¥
 			for (i = 1; i <= 5; i++)
 			{
 				for (j = 0; j < 3; j++)
@@ -113,7 +113,7 @@ int main(void)
 			switch (getch())
 			{
 			case 27:
-				system("cls");//°ÔÀÓ½ÃÀÛ
+				system("cls");//ê²Œì„ì‹œì‘
 				do {
 					total = 0;
 					for (i = 0; i <3; i++) {
@@ -208,8 +208,8 @@ int main(void)
 						system("cls");
 						goto main;
 					}
-				} while (a != 1 || a != 2);//a°¡ 1ÀÌ³ª 2 ¾Æ´Ò ¶§ ´Ù½Ã ÀÔ·ÂÇÏ¶ó°í ÇÒ °Í.
-				break;//game start ÀÇ °æ¿ì ³¡.(case 27 ³¡.)
+				} while (a != 1 || a != 2);//aê°€ 1ì´ë‚˜ 2 ì•„ë‹ ë•Œ ë‹¤ì‹œ ì…ë ¥í•˜ë¼ê³  í•  ê²ƒ.
+				break;//game start ì˜ ê²½ìš° ë.(case 27 ë.)
 			case 's':
 			case 'S':
 				system("cls");
@@ -239,27 +239,27 @@ void drawDice(int _i, int _number)
 	switch (_i)
 	{
 	case 1:
-		printf("¦£¦¡¦¡¦¡¦¤");
+		printf("â”Œâ”€â”€â”€â”");
 		break;
 	case 2:
 		switch (_number)
 		{
 		case 0:
 			printf
-			("¦¢      ¦¢");
+			("â”‚      â”‚");
 			break;
 		case 1:
 		case 2:
-			printf("¦¢      ¦¢");
+			printf("â”‚      â”‚");
 			break;
 		case 3:
 			printf
-			("¦¢    ¡Ü¦¢");
+			("â”‚    â—â”‚");
 			break;
 		case 4:
 		case 5:
 		case 6:
-			printf("¦¢¡Ü  ¡Ü¦¢");
+			printf("â”‚â—  â—â”‚");
 			break;
 		}
 		break;
@@ -267,19 +267,19 @@ void drawDice(int _i, int _number)
 		switch (_number)
 		{
 		case 0:
-			printf("¦¢      ¦¢");
+			printf("â”‚      â”‚");
 			break;
 		case 1:
 		case 3:
 		case 5:
-			printf("¦¢  ¡Ü  ¦¢");
+			printf("â”‚  â—  â”‚");
 			break;
 		case 2:
 		case 6:
-			printf("¦¢¡Ü  ¡Ü¦¢");
+			printf("â”‚â—  â—â”‚");
 			break;
 		case 4:
-			printf("¦¢      ¦¢");
+			printf("â”‚      â”‚");
 			break;
 		}
 		break;
@@ -287,24 +287,24 @@ void drawDice(int _i, int _number)
 		switch (_number)
 		{
 		case 0:
-			printf("¦¢      ¦¢");
+			printf("â”‚      â”‚");
 			break;
 		case 1:
 		case 2:
-			printf("¦¢      ¦¢");
+			printf("â”‚      â”‚");
 			break;
 		case 3:
-			printf("¦¢¡Ü    ¦¢");
+			printf("â”‚â—    â”‚");
 			break;
 		case 4:
 		case 5:
 		case 6:
-			printf("¦¢¡Ü  ¡Ü¦¢");
+			printf("â”‚â—  â—â”‚");
 			break;
 		}
 		break;
 	case 5:
-		printf("¦¦¦¡¦¡¦¡¦¥");
+		printf("â””â”€â”€â”€â”˜");
 		break;
 	}
 }
