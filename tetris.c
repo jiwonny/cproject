@@ -76,7 +76,7 @@ int key; // keyboard input
 
 int speed; // Game Speed 
 
-		   //+∫Øºˆ
+		   //+Î≥ÄÏàò
 int score_p1; // Game Score
 int score_p2;
 int p1_temp;
@@ -89,7 +89,7 @@ FILE * fptr;
 int item_again;
 int item_use;
 int item_use_on;
-//√ﬂ∞° ∫Øºˆ End
+//Ï∂îÍ∞Ä Î≥ÄÏàò End
 int new_block_on = 0;
 int crush_on = 0;
 
@@ -116,18 +116,18 @@ void gotoxy(int x, int y) {
 
 void item_show(void) {
 	int x = 5, y = 5;
-	gotoxy(x, y + 0); printf("¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«");
-	gotoxy(x, y + 1); printf("¢«                                          ¢«");
-	gotoxy(x, y + 2); printf("¢«  +-----------------------------------+   ¢«");
-	gotoxy(x, y + 3); printf("¢«  |  P%d uses item. Select P%d block.   |   ¢«", item_use, now);
-	gotoxy(x, y + 4); printf("¢«  +-----------------------------------+   ¢«");
-	gotoxy(x, y + 5); printf("¢«  Press any key to resume..               ¢«");
-	gotoxy(x, y + 6); printf("¢«    1   °· 2 °·°·   3   °·       4   °·   ¢«");
-	gotoxy(x, y + 7); printf("¢«        °·   °·°·     °·°·°·       °·°·   ¢«");
-	gotoxy(x, y + 8); printf("¢«        °·                         °·     ¢«");
-	gotoxy(x, y + 9); printf("¢«        °·                                ¢«");
-	gotoxy(x, y + 10); printf("¢«              %d sec(s) lefts.             ¢«", x);
-	gotoxy(x, y + 11); printf("¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«");
+	gotoxy(x, y + 0); printf("‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§");
+	gotoxy(x, y + 1); printf("‚ñ§                                          ‚ñ§");
+	gotoxy(x, y + 2); printf("‚ñ§  +-----------------------------------+   ‚ñ§");
+	gotoxy(x, y + 3); printf("‚ñ§  |  P%d uses item. Select P%d block.   |   ‚ñ§", item_use, now);
+	gotoxy(x, y + 4); printf("‚ñ§  +-----------------------------------+   ‚ñ§");
+	gotoxy(x, y + 5); printf("‚ñ§  Press any key to resume..               ‚ñ§");
+	gotoxy(x, y + 6); printf("‚ñ§    1   ‚ñ† 2 ‚ñ†‚ñ†   3   ‚ñ†       4   ‚ñ†   ‚ñ§");
+	gotoxy(x, y + 7); printf("‚ñ§        ‚ñ†   ‚ñ†‚ñ†     ‚ñ†‚ñ†‚ñ†       ‚ñ†‚ñ†   ‚ñ§");
+	gotoxy(x, y + 8); printf("‚ñ§        ‚ñ†                         ‚ñ†     ‚ñ§");
+	gotoxy(x, y + 9); printf("‚ñ§        ‚ñ†                                ‚ñ§");
+	gotoxy(x, y + 10); printf("‚ñ§              %d sec(s) lefts.             ‚ñ§", x);
+	gotoxy(x, y + 11); printf("‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§");
 
 }
 //
@@ -195,11 +195,11 @@ void title(void) {
 	int y = 4; 
 
 
-	gotoxy(x, y + 0); printf("¶£¶°¶°¶°¶°¶°¶°¶°¶°¶°¶°¶°¶°¶°¶§");
-	gotoxy(x, y + 1); printf("¶¢                          ¶¢");
-	gotoxy(x, y + 2); printf("¶¢                          ¶¢");
-	gotoxy(x, y + 3); printf("¶¢                          ¶¢");
-	gotoxy(x, y + 4); printf("¶¶¶°¶°¶°¶°¶°¶°¶°¶°¶°¶°¶°¶°¶°¶•");
+	gotoxy(x, y + 0); printf("‚îå‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îê");
+	gotoxy(x, y + 1); printf("‚îÇ                          ‚îÇ");
+	gotoxy(x, y + 2); printf("‚îÇ                          ‚îÇ");
+	gotoxy(x, y + 3); printf("‚îÇ                          ‚îÇ");
+	gotoxy(x, y + 4); printf("‚îî‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îò");
 
 	gotoxy(x + 5, y + 2); printf("T E T R I S");
 	gotoxy(x, y + 7); printf("Please Enter Any Key to Start..");
@@ -210,9 +210,9 @@ void title(void) {
 	gotoxy(x, y + 14); printf("   F   : Use Item");
 
 	gotoxy(x, y + 16); printf("Player 2:");
-	gotoxy(x, y + 17); printf("  °‚   : Shift");
-	gotoxy(x, y + 18); printf("¢∑  ¢π : Left / Right");
-	gotoxy(x, y + 19); printf("  °‰   : Drop");
+	gotoxy(x, y + 17); printf("  ‚ñ≥   : Shift");
+	gotoxy(x, y + 18); printf("‚óÅ  ‚ñ∑ : Left / Right");
+	gotoxy(x, y + 19); printf("  ‚ñΩ   : Drop");
 	gotoxy(x, y + 20); printf("   M   : Use Item");
 
 	gotoxy(x, y + 22); printf(" Pause : P    ESC  : Quit");
@@ -246,7 +246,7 @@ void reset(void) {
 	}
 	else
 	{
-		fprintf(fptr, "\n %d:%d:%d Ω√¿€\n", t->tm_hour, t->tm_min, t->tm_sec);
+		fprintf(fptr, "\n %d:%d:%d ÏãúÏûë\n", t->tm_hour, t->tm_min, t->tm_sec);
 	}
 	fclose(fptr);
 
@@ -302,7 +302,7 @@ void reset_main_cpy(void) {
 void draw_map(void) { // Game Status 
 	int y = 3;
 
-	gotoxy(STATUS_X_ADJ, y + 1); printf("%P%d¬˜∑ /%dπ¯¬∞ turn", now, turn);
+	gotoxy(STATUS_X_ADJ, y + 1); printf("%P%dÏ∞®Î°Ä/%dÎ≤àÏß∏ turn", now, turn);
 	gotoxy(STATUS_X_ADJ, y + 2); printf("+-  N E X T  -+ ");
 	gotoxy(STATUS_X_ADJ, y + 3); printf("|             | ");
 	gotoxy(STATUS_X_ADJ, y + 4); printf("|             | ");
@@ -325,9 +325,9 @@ void draw_map(void) { // Game Status
 	gotoxy(STATUS_X_ADJ, 24); printf("   F   : Use Item");
 
 	gotoxy(STATUS_X_ADJ, 25); printf("Player 2:");
-	gotoxy(STATUS_X_ADJ, 26); printf("  °‚   : Shift");
-	gotoxy(STATUS_X_ADJ, 27); printf("¢∑  ¢π : Left / Right");
-	gotoxy(STATUS_X_ADJ, 28); printf("  °‰   : Drop");
+	gotoxy(STATUS_X_ADJ, 26); printf("  ‚ñ≥   : Shift");
+	gotoxy(STATUS_X_ADJ, 27); printf("‚óÅ  ‚ñ∑ : Left / Right");
+	gotoxy(STATUS_X_ADJ, 28); printf("  ‚ñΩ   : Drop");
 	gotoxy(STATUS_X_ADJ, 29); printf("   M   : Use Item");
 
 
@@ -352,15 +352,15 @@ void draw_main(void) {
 					printf(". ");
 					break;
 				case WALL:
-					printf("¢Ã");
+					printf("‚ñ©");
 					break;
 				case INACTIVE_BLOCK:
 					setcolor(7, 0);
-					printf("°‡");
+					printf("‚ñ°");
 					break;
 				case ACTIVE_BLOCK:
 					colorset();
-					printf("°·");
+					printf("‚ñ†");
 					setcolor(7, 0);
 					break;
 				}
@@ -380,7 +380,7 @@ void new_block(void) {
 	bx = (MAIN_X / 2) - 1;
 	by = 0;
 
-	//∆«∫∞ Ω√¿€
+	//ÌåêÎ≥Ñ ÏãúÏûë
 	if (item_use_on == 1) {
 		item_show();
 
@@ -395,7 +395,7 @@ void new_block(void) {
 		item_use = 0;
 		for (countdown = 5; countdown > 0;) {
 			Sleep(1000);
-			gotoxy(5, 15); printf("¢«              %d sec(s) lefts.             ¢«", countdown);
+			gotoxy(5, 15); printf("‚ñ§              %d sec(s) lefts.             ‚ñ§", countdown);
 			if (kbhit()) {
 				choice = getch();
 			}
@@ -435,7 +435,7 @@ void new_block(void) {
 		for (j = 0; j<4; j++) {
 			if (blocks[b_type_next][0][i][j] == 1) {
 				gotoxy(STATUS_X_ADJ + 2 + j, i + 6);
-				printf("°·");
+				printf("‚ñ†");
 			}
 			else {
 				gotoxy(STATUS_X_ADJ + 2 + j, i + 6);
@@ -538,7 +538,7 @@ void check_key(void) {
 				}
 				else
 				{
-					fprintf(fptr, "ESC ¡æ∑· ªÁøÎ\n");
+					fprintf(fptr, "ESC Ï¢ÖÎ£å ÏÇ¨Ïö©\n");
 				}
 				fclose(fptr);
 
@@ -671,7 +671,7 @@ void check_line(void) {
 			if (main_org[i][j]>0) block_amount++;
 		}
 		if (block_amount == MAIN_X - 2) {
-			//«√∑π¿ÃæÓø° µ˚∂Û ¡°ºˆ +1
+			//ÌîåÎ†àÏù¥Ïñ¥Ïóê Îî∞Îùº Ï†êÏàò +1
 			if (now == 1)
 				score_p1++;
 			if (now == 2)
@@ -687,7 +687,7 @@ void check_line(void) {
 		}
 		else i--;
 	}
-	//æ∆¿Ã≈€ ++
+	//ÏïÑÏù¥ÌÖú ++
 	if (score_p1 != p1_temp) {
 		if (score_p1 - p1_temp >= 2)
 			item_p1++, item_p1a++;
@@ -711,7 +711,7 @@ void check_line(void) {
 	turn++;
 	int y = 3;
 	gotoxy(STATUS_X_ADJ, STATUS_Y_SCORE); printf("        %6d", score_p1);
-	gotoxy(STATUS_X_ADJ, y + 1); printf("P%d¬˜∑ /%dπ¯¬∞ turn", now, turn);
+	gotoxy(STATUS_X_ADJ, y + 1); printf("P%dÏ∞®Î°Ä/%dÎ≤àÏß∏ turn", now, turn);
 	gotoxy(STATUS_X_ADJ, y + 8); printf("P1 score  :");
 	gotoxy(STATUS_X_ADJ, STATUS_Y_SCORE = y + 9); printf("        %6d", score_p1);
 	gotoxy(STATUS_X_ADJ, y + 10); printf("P2 score  :");
@@ -738,26 +738,26 @@ void check_game_over(void) {
 		if (main_org[3][i]>0 || turn == 61) {  // end condition 
 			int used_p1 = item_p1a - item_p1;
 			int used_p2 = item_p2a - item_p2;
-			gotoxy(x, y + 0); printf("¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«");
+			gotoxy(x, y + 0); printf("‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§");
 			if (win == 0) {
-				gotoxy(x, y + 1); printf("¢«       Score same - DRAW!     ¢«");
+				gotoxy(x, y + 1); printf("‚ñ§       Score same - DRAW!     ‚ñ§");
 			}
 			if (win != 0) {
-				gotoxy(x, y + 1); printf("¢«           P%d Win!            ¢«", win);
+				gotoxy(x, y + 1); printf("‚ñ§           P%d Win!            ‚ñ§", win);
 			}
-			gotoxy(x, y + 2); printf("¢«  +-----------------------+   ¢«");
-			gotoxy(x, y + 3); printf("¢«  |  G A M E  O V E R..   |   ¢«");
-			gotoxy(x, y + 4); printf("¢«  +-----------------------+   ¢«");
-			gotoxy(x, y + 5); printf("¢«     P1   SCORE: %6d         ", score_p1);
-			gotoxy(x, y + 6); printf("¢«     P2   SCORE: %6d         ", score_p2);
-			gotoxy(x + 16, y + 5); printf("¢«");
-			gotoxy(x + 16, y + 6); printf("¢«");
-			gotoxy(x, y + 7); printf("¢«                              ¢«");
-			gotoxy(x, y + 8); printf("¢«  Press any key to restart..  ¢«");
-			gotoxy(x, y + 9); printf("¢«                              ¢«");
-			gotoxy(x, y + 10); printf("¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«");
+			gotoxy(x, y + 2); printf("‚ñ§  +-----------------------+   ‚ñ§");
+			gotoxy(x, y + 3); printf("‚ñ§  |  G A M E  O V E R..   |   ‚ñ§");
+			gotoxy(x, y + 4); printf("‚ñ§  +-----------------------+   ‚ñ§");
+			gotoxy(x, y + 5); printf("‚ñ§     P1   SCORE: %6d         ", score_p1);
+			gotoxy(x, y + 6); printf("‚ñ§     P2   SCORE: %6d         ", score_p2);
+			gotoxy(x + 16, y + 5); printf("‚ñ§");
+			gotoxy(x + 16, y + 6); printf("‚ñ§");
+			gotoxy(x, y + 7); printf("‚ñ§                              ‚ñ§");
+			gotoxy(x, y + 8); printf("‚ñ§  Press any key to restart..  ‚ñ§");
+			gotoxy(x, y + 9); printf("‚ñ§                              ‚ñ§");
+			gotoxy(x, y + 10); printf("‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§");
 
-			// ±‚∑œ ¿˙¿Â
+			// Í∏∞Î°ù Ï†ÄÏû•
 			if ((fptr = fopen("tetris.txt", "a")) == NULL) {
 				printf("File could not be opened\n");
 				return -1;
@@ -791,14 +791,14 @@ void pause(void) {
 	int y = 5;
 
 	for (i = 1; i<MAIN_X - 2; i++) {
-		gotoxy(x, y + 0); printf("¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«");
-		gotoxy(x, y + 1); printf("¢«                              ¢«");
-		gotoxy(x, y + 2); printf("¢«  +-----------------------+   ¢«");
-		gotoxy(x, y + 3); printf("¢«  |       P A U S E       |   ¢«");
-		gotoxy(x, y + 4); printf("¢«  +-----------------------+   ¢«");
-		gotoxy(x, y + 5); printf("¢«  Press any key to resume..   ¢«");
-		gotoxy(x, y + 6); printf("¢«                              ¢«");
-		gotoxy(x, y + 7); printf("¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«¢«");
+		gotoxy(x, y + 0); printf("‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§");
+		gotoxy(x, y + 1); printf("‚ñ§                              ‚ñ§");
+		gotoxy(x, y + 2); printf("‚ñ§  +-----------------------+   ‚ñ§");
+		gotoxy(x, y + 3); printf("‚ñ§  |       P A U S E       |   ‚ñ§");
+		gotoxy(x, y + 4); printf("‚ñ§  +-----------------------+   ‚ñ§");
+		gotoxy(x, y + 5); printf("‚ñ§  Press any key to resume..   ‚ñ§");
+		gotoxy(x, y + 6); printf("‚ñ§                              ‚ñ§");
+		gotoxy(x, y + 7); printf("‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§‚ñ§");
 	}
 	getch();
 
@@ -811,7 +811,7 @@ void pause(void) {
 		for (j = 0; j<4; j++) {
 			if (blocks[b_type_next][0][i][j] == 1) {
 				gotoxy(MAIN_X + MAIN_X_ADJ + 3 + j, i + 6);
-				printf("°·");
+				printf("‚ñ†");
 			}
 			else {
 				gotoxy(MAIN_X + MAIN_X_ADJ + 3 + j, i + 6);
